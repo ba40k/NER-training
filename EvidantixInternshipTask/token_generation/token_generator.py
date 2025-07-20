@@ -2,7 +2,6 @@ import random
 import os
 from tqdm import tqdm
 
-# 📁 Пути
 DATA_DIR = "token_generation"
 TRAIN_PATH = os.path.join(DATA_DIR, "tokens.txt")
 VALID_PATH = os.path.join(DATA_DIR, "valid.txt")
@@ -75,7 +74,7 @@ def main(sample_size=10000, train_ratio=0.8, noise_ratio=0.6):
         phrase_with_noise = insert_noise(phrase, noises, noise_ratio)
         phrases.append(phrase_with_noise)
 
-    # 🎲 Разделение
+    # Разделение
     random.shuffle(phrases)
     split = int(len(phrases) * train_ratio)
     train_phrases = phrases[:split]

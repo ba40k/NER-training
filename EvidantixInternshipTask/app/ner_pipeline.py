@@ -1,10 +1,8 @@
-# app/ner_pipeline.py
-
 import requests
 from bs4 import BeautifulSoup
 from transformers import pipeline
 
-# 1. HuggingFace NER-pipeline (единожды инициализируется при импорте модуля)
+# 1. HuggingFace NER-pipeline 
 hf_ner = pipeline(
     "ner",
     model="/home/radamir/Загрузки/EvidantixInternshipTask-main/ner-product-model",
@@ -130,7 +128,6 @@ def extract_products_hf(text: str) -> list[str]:
     products = []
 
     for ent in entities:
-    # HF возвращает ключи “entity_group”, “word” и “score”
         if (
             ent.get("entity_group", "").upper() == "PRODUCT"
             and ent.get("score", 0) >= 0.7

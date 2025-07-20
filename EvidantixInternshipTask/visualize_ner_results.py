@@ -80,5 +80,5 @@ for toks, true_seq, pred_seq in zip(valid_tokens, true_tag_seqs, pred_tag_seqs):
     print("-" * 60)
 
 # 8. Отчет
-print("\n📊 Classification Report:\n")
+print("\n Classification Report:\n")
 print(classification_report(true_tag_seqs, pred_tag_seqs))
