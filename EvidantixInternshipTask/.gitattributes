@@ -1,3 +1,5 @@
 ner-product-model/model.safetensors filter=lfs diff=lfs merge=lfs -text
 ner-product-model/checkpoint-30864/optimizer.pt filter=lfs diff=lfs merge=lfs -text
 ner-product-model/checkpoint-30864/model.safetensors filter=lfs diff=lfs merge=lfs -text
+ner-product-model/checkpoint-46296/model.safetensors filter=lfs diff=lfs merge=lfs -text
+ner-product-model/checkpoint-46296/optimizer.pt filter=lfs diff=lfs merge=lfs -text
