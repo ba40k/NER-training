@@ -36,6 +36,6 @@ S
   'weighted avg': {'precision': 0.9960171889739021, 'recall': 0.9969576164498531, 'f1-score': 0.9964871808315421, 'support': 9532}}, 
   'eval_runtime': 73.2464, 'eval_samples_per_second': 104.674, 'eval_steps_per_second': 13.093, 'epoch': 9.0}
 
-- 1771 tokens for training
-- 404 tokens for validation
+- 223655 tokens for training
+- 44430 tokens for validation
 
