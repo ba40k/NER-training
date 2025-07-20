@@ -5,8 +5,8 @@ from transformers import pipeline
 # 1. HuggingFace NER-pipeline 
 hf_ner = pipeline(
     "ner",
-    model="/home/radamir/Загрузки/EvidantixInternshipTask-main/ner-product-model",
-    tokenizer="/home/radamir/Загрузки/EvidantixInternshipTask-main/ner-product-model",
+    model="ner-product-model",
+    tokenizer="ner-product-model",
     grouped_entities=True,
     aggregation_strategy="simple"
 )
