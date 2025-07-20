@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мебельный NER Анализатор</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card shadow">
+                    <div class="card-header bg-primary text-white">
+                        <h2 class="text-center">Анализатор мебели на веб-страницах</h2>
+                    </div>
+                    <div class="card-body">
+                        <form id="urlForm">
+                            <div class="mb-3">
+                                <label for="urlInput" class="form-label">Введите URL страницы с мебелью:</label>
+                                <div class="input-group">
+                                    <input type="url" class="form-control" id="urlInput" placeholder="https://example.com/furniture" required>
+                                    <button class="btn btn-primary" type="submit">Анализировать</button>
+                                </div>
+                                <div class="form-text">Пример: https://www.ikea.com/ru/ru/p/malm-komod-s-3-yashchikami-belyy-90214149/</div>
+                            </div>
+                        </form>
+                        
+                        <div id="loadingSpinner" class="text-center my-4 d-none">
+                            <div class="spinner-border text-primary" role="status">
+                                <span class="visually-hidden">Загрузка...</span>
+                            </div>
+                            <p class="mt-2">Анализируем страницу, пожалуйста подождите...</p>
+                        </div>
+                        
+                        <div id="resultsContainer" class="d-none">
+                            <h4 class="mt-4">Найденная мебель:</h4>
+                            <div class="alert alert-info" id="urlDisplay"></div>
+                            <ul class="list-group" id="productsList"></ul>
+                            
+                            <div class="mt-4">
+                                <button id="copyButton" class="btn btn-outline-secondary">
+                                    <i class="bi bi-clipboard"></i> Копировать список
+                                </button>
+                                <button id="newSearchButton" class="btn btn-outline-primary ms-2">
+                                    <i class="bi bi-search"></i> Новый поиск
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div id="errorAlert" class="alert alert-danger mt-3 d-none" role="alert"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="/static/js/script.js"></script>
+</body>
+</html>
